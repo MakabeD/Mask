@@ -6,6 +6,7 @@ public class room_1_collision : MonoBehaviour
 {
     float time;
     public GameObject ONEtoTWOtrigger;
+    public GameObject maskONE;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class room_1_collision : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("OntriggerStay room1");
+        
         if(other.gameObject.CompareTag("room1_cube"))
         time +=Time.deltaTime;
         
@@ -33,6 +34,7 @@ public class room_1_collision : MonoBehaviour
 
             other.gameObject.transform.SetLocalPositionAndRotation(new Vector3(0.066f, 0.136f, -0.502f), other.gameObject.transform.rotation);
             ONEtoTWOtrigger.SetActive(true);
+            if(maskONE!=null)maskONE.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
