@@ -18,6 +18,6 @@ public class play_button : MonoBehaviour
     }
     public void LoadSampleScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Cuartosala");
     }
 }
